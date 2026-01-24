@@ -1,0 +1,29 @@
+CREATE TABLE subjects (
+  id TEXT NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL UNIQUE,
+  emoji TEXT,
+  color TEXT,
+  weekly_goal_minutes INTEGER
+);
+
+insertSubject:
+INSERT INTO subjects(id, name, emoji, color, weekly_goal_minutes)
+VALUES (?1, ?2, ?3, ?4, ?5);
+
+listSubjects:
+SELECT * FROM subjects ORDER BY name ASC;
+
+deleteSubject:
+DELETE FROM subjects WHERE id = ?1;
+
+updateSubject:
+UPDATE subjects
+SET name = ?2, emoji = ?3, color = ?4, weekly_goal_minutes = ?5
+WHERE id = ?1;
+
+getSubjectById:
+SELECT * FROM subjects WHERE id = ?1 LIMIT 1;
+
+deleteAll:
+DELETE FROM subjects;
+

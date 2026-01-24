@@ -1,0 +1,17 @@
+CREATE TABLE reframe_sessions (
+  id TEXT NOT NULL PRIMARY KEY,
+  type TEXT NOT NULL,              -- self_talk, bright_spots, lens_shift, distance
+  date INTEGER NOT NULL,
+  user_entries TEXT NOT NULL,      -- JSON text
+  reframed_text TEXT,
+  linked_mood_id TEXT,
+  duration_seconds INTEGER NOT NULL,
+  draft INTEGER NOT NULL DEFAULT 0
+);
+
+insertReframe:
+INSERT INTO reframe_sessions(id, type, date, user_entries, reframed_text, linked_mood_id, duration_seconds, draft)
+VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8);
+
+recentReframes:
+SELECT * FROM reframe_sessions ORDER BY date DESC LIMIT ?1;

@@ -1,0 +1,65 @@
+CREATE TABLE user_preferences (
+  id INTEGER NOT NULL PRIMARY KEY DEFAULT 1,
+  user_name TEXT NOT NULL DEFAULT '',
+  user_age INTEGER NOT NULL DEFAULT 18,
+  focus_area TEXT NOT NULL DEFAULT 'BOTH',
+  reminder_time TEXT NOT NULL DEFAULT 'NONE',
+  reminder_hour INTEGER NOT NULL DEFAULT -1,
+  is_onboarding_completed INTEGER NOT NULL DEFAULT 0,
+  daily_reminder_enabled INTEGER NOT NULL DEFAULT 0,
+  theme_preference TEXT NOT NULL DEFAULT 'LIGHT',
+  CHECK (id = 1)
+);
+
+insertPreferences:
+INSERT OR REPLACE INTO user_preferences(id, user_name, user_age, focus_area, reminder_time, reminder_hour, is_onboarding_completed, daily_reminder_enabled, theme_preference)
+VALUES (1, ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8);
+
+updatePreferences:
+UPDATE user_preferences SET
+  user_name = ?1,
+  user_age = ?2,
+  focus_area = ?3,
+  reminder_time = ?4,
+  reminder_hour = ?5,
+  is_onboarding_completed = ?6,
+  daily_reminder_enabled = ?7,
+  theme_preference = ?8
+WHERE id = 1;
+
+getPreferences:
+SELECT * FROM user_preferences WHERE id = 1 LIMIT 1;
+
+markOnboardingComplete:
+UPDATE user_preferences SET is_onboarding_completed = 1 WHERE id = 1;
+
+resetOnboarding:
+UPDATE user_preferences SET is_onboarding_completed = 0 WHERE id = 1;
+
+isOnboardingCompleted:
+SELECT is_onboarding_completed FROM user_preferences WHERE id = 1 LIMIT 1;
+
+getUserName:
+SELECT user_name FROM user_preferences WHERE id = 1 LIMIT 1;
+
+setUserName:
+UPDATE user_preferences SET user_name = ?1 WHERE id = 1;
+
+setDailyReminderEnabled:
+UPDATE user_preferences SET daily_reminder_enabled = ?1 WHERE id = 1;
+
+getDailyReminderEnabled:
+SELECT daily_reminder_enabled FROM user_preferences WHERE id = 1 LIMIT 1;
+
+setReminderTime:
+UPDATE user_preferences SET reminder_time = ?1, reminder_hour = ?2 WHERE id = 1;
+
+getReminderTime:
+SELECT reminder_time FROM user_preferences WHERE id = 1 LIMIT 1;
+
+setThemePreference:
+UPDATE user_preferences SET theme_preference = ?1 WHERE id = 1;
+
+getThemePreference:
+SELECT theme_preference FROM user_preferences WHERE id = 1 LIMIT 1;
+
