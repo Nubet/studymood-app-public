@@ -35,3 +35,16 @@ Note (Windows + SQLDelight): the migration verification task possibly may fail d
 ```bash
 gradlew.bat build -x verifyCommonMainStudyMoodDatabaseMigration
 ```
+
+
+## App preview & Key Benefits
+
+A quick visual look at the app and its key features.
+
+| Study Mood | 10 Second Check-in |
+|:---:|:---:|
+| <img src="images/1.jpg" width="300" alt="Study Mood app home screen"/> | <img src="images/2.jpg" width="300" alt="10 Second Check-in mood tracker"/> |
+| **Study Sessions Tracked** | **Turn Patterns Into a Plan** |
+| <img src="images/3.jpg" width="300" alt="Study Sessions Tracked screen"/> | <img src="images/4.jpg" width="300" alt="Mood and study pattern analysis"/> |
+| **Reset When Stress Hits** | **Private By Design** |
+| <img src="images/5.jpg" width="300" alt="Guided stress relief exercises"/> | <img src="images/6.jpg" width="300" alt="Privacy features: on-device storage, no accounts, offline"/> |
