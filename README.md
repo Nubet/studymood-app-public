@@ -1,3 +1,5 @@
+![Studymood banner](docs/images/banner-studymood.png)
+
 # Studymood
 
 Studymood is a small app that supports day-to-day wellbeing and studying: quick mood check-ins, study sessions, and quick self-regulation tools (e.g. breathing, reframing).
@@ -41,10 +43,10 @@ gradlew.bat build -x verifyCommonMainStudyMoodDatabaseMigration
 
 A quick visual look at the app and its key features.
 
-| Study Mood | 10 Second Check-in |
-|:---:|:---:|
-| <img src="images/1.jpg" width="300" alt="Study Mood app home screen"/> | <img src="images/2.jpg" width="300" alt="10 Second Check-in mood tracker"/> |
-| **Study Sessions Tracked** | **Turn Patterns Into a Plan** |
-| <img src="images/3.jpg" width="300" alt="Study Sessions Tracked screen"/> | <img src="images/4.jpg" width="300" alt="Mood and study pattern analysis"/> |
-| **Reset When Stress Hits** | **Private By Design** |
-| <img src="images/5.jpg" width="300" alt="Guided stress relief exercises"/> | <img src="images/6.jpg" width="300" alt="Privacy features: on-device storage, no accounts, offline"/> |
+|                                 Study Mood                                  | 10 Second Check-in |
+|:---------------------------------------------------------------------------:|:---:|
+| <img src="docs/images/1.jpg" width="300" alt="Study Mood app home screen"/> | <img src="docs/images/2.jpg" width="300" alt="10 Second Check-in mood tracker"/> |
+|                         **Study Sessions Tracked**                          | **Turn Patterns Into a Plan** |
+|  <img src="docs/images/3.jpg" width="300" alt="Study Sessions Tracked screen"/>  | <img src="docs/images/4.jpg" width="300" alt="Mood and study pattern analysis"/> |
+|                         **Reset When Stress Hits**                          | **Private By Design** |
+| <img src="docs/images/5.jpg" width="300" alt="Guided stress relief exercises"/>  | <img src="docs/images/6.jpg" width="300" alt="Privacy features: on-device storage, no accounts, offline"/> |
